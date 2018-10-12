@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.john.restlib.RestfulServiceWrapper;
 import com.john.restlib.RetrofitTwoServiceWrapper;
 import com.john.restlibapp.models.HackerNewsResponse;
@@ -15,10 +14,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.john.restlibapp.rest.RetroOneServerEndpoints;
 import com.john.restlibapp.rest.RetroTwoServerEndpoints;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 import okhttp3.ResponseBody;
 import retrofit.Callback;
 import retrofit.RetrofitError;
@@ -111,7 +108,6 @@ public class MainActivity extends AppCompatActivity
 
     private void getStoryRetrofitTwo()
     {
-
         final RetrofitTwoServiceWrapper<RetroTwoServerEndpoints> wrapper2 = new RetrofitTwoServiceWrapper<>();
         Call<ResponseBody> call = wrapper2.createEndpoint(BASE_URL_RETRO_TWO, RetroTwoServerEndpoints.class)
                                             .getStory(8863,"pretty");
